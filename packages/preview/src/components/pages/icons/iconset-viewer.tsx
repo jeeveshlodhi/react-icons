@@ -7,7 +7,6 @@ import IconsPageLoading from "./loading";
 
 export default function IconSetViewer({ icon }) {
   const IconSet = loadable.lib(() => getIcons(icon.id));
-  // console.log(icon)
   return (
     <>
       <h2>Icons</h2>
