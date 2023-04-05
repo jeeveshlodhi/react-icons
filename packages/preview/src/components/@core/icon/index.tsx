@@ -2,19 +2,21 @@ import toast from "cogo-toast";
 import copy from "copy-to-clipboard";
 import React from "react";
 
-function Icon({ icon, name, highlightPattern = null }) {
+function Icon({ icon,id, name, highlightPattern = null }) {
+  console.log(icon, id)
   const copyToClipboard = () => {
-    copy(name);
+    copy(`import { ${name} } from "react-icons/${id}";`);
     toast.success(`Copied '${name}' to clipboard`, {
       position: "bottom-center",
     });
   };
 
   const highlightedName = () => {
-    if (highlightPattern)
+    if (highlightPattern) {
       return name
         .split(highlightPattern)
         .map((part) => (part.match(highlightPattern) ? <b>{part}</b> : part));
+    }
     return name;
   };
 

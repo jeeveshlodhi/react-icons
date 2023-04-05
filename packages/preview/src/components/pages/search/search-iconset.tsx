@@ -20,6 +20,7 @@ export default function SearchIconSet({ icon, query, highlightPattern }) {
               <Icon
                 key={name}
                 icon={icons[name]}
+                id={icon.id}
                 name={name}
                 highlightPattern={highlightPattern}
               />

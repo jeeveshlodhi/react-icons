@@ -15,6 +15,7 @@ interface Props {
 class App extends NextApp<Props> {
   render() {
     const { pageProps, Component } = this.props;
+    
     return (
       <Provider>
         <>

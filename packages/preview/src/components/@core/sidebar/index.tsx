@@ -15,7 +15,7 @@ export default function Sidebar() {
   const [inputQuery, setInputQuery] = useState(null);
 
   const { query, setQuery, setResults } = React.useContext(Context);
-
+  
   const setQueryEveywhere = (query) => {
     setQuery(query); // Context
     setInputQuery(query); // State for this component
