@@ -8,7 +8,6 @@ export default function SearchPageComponent() {
   const allIcons = ALL_ICONS;
 
   const { query } = React.useContext(Context);
-
   if (query.length > 2) {
     const hightlightPattern = new RegExp(`(${query})`, "i");
     return (

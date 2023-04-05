@@ -3,7 +3,6 @@ import copy from "copy-to-clipboard";
 import React from "react";
 
 function Icon({ icon,id, name, highlightPattern = null }) {
-  console.log(icon, id)
   const copyToClipboard = () => {
     copy(`import { ${name} } from "react-icons/${id}";`);
     toast.success(`Copied '${name}' to clipboard`, {
